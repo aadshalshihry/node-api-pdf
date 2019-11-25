@@ -1,0 +1,57 @@
+.container {
+  //border: 1px black solid;
+  width: 780px;
+  height: 500px;
+  margin-top: 30px;
+  margin-right: 30px;
+  color: #fff;
+  padding-right: 35px;
+
+  .card {
+    //border: 1px black solid;
+    display: inline-block;
+    width: 200px;
+    height: 210px;
+    margin-right: 20px;
+    margin-top: 15px;
+
+
+
+    img {
+      width: 200px;
+      height: 190px;
+      border-bottom: 0px;
+      border-radius: 6px 6px 0 0;
+    }
+
+    .card-body {
+      //border: 1px black solid;
+      width: 200px;
+      height: 20px;
+      background: rgb(150, 143, 143);
+      font-size: 2em;
+      border-radius: 0 0 6px 6px;
+      padding: 5px 0;
+
+      p.share-text {
+        //border: 1px black solid;
+        width: 40px;
+        display: inline-block;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: -5px;
+        border-right: 1px gray solid;
+      }
+
+      p.share-value {
+        //border: 1px black solid;
+        text-align: center;
+        width: 142px;
+        display: inline-block;
+        margin-top: -5px;
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}

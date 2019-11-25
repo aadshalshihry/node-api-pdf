@@ -1,0 +1,138 @@
+$right_pos_loc: 620px;
+$tweet_top: 242px;
+$tweet_top_offset: 23px;
+
+#page8_loc0 {
+  //border: 1px black solid;
+  width: 210px;
+  //height: 40px;
+  position: absolute;
+  top: $tweet_top;
+  right: $right_pos_loc;
+
+  p.hashtag {
+    color: #fff;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  h3.tweets {
+    //border: 1px black solid;
+    width: 105px;
+    height: 40px;
+    position: relative;
+    top: -145px;
+    left: 135px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+#page8_loc1 {
+   //border: 1px black solid;
+  width: 210px;
+  // height: 40px;
+  position: absolute;
+  top: $tweet_top + ($tweet_top_offset * 1);
+  right: $right_pos_loc;
+
+  p.hashtag {
+    color: #fff;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  h3.tweets {
+     //border: 1px black solid;
+    width: 105px;
+    height: 40px;
+    position: relative;
+    top: -145px;
+    left: 270px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+#page8_loc2 {
+   //border: 1px black solid;
+  width: 210px;
+  // height: 40px;
+  position: absolute;
+  top: $tweet_top + ($tweet_top_offset * 2);
+  right: $right_pos_loc;
+
+  p.hashtag {
+    color: #fff;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  h3.tweets {
+     //border: 1px black solid;
+    width: 105px;
+    height: 40px;
+    position: relative;
+    top: -40px;
+    left: 410px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+#page8_loc3 {
+   //border: 1px black solid;
+  width: 210px;
+  // height: 40px;
+  position: absolute;
+  top: $tweet_top + ($tweet_top_offset * 3);
+  right: $right_pos_loc;
+
+  p.hashtag {
+    color: #fff;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  h3.tweets {
+     //border: 1px black solid;
+    width: 105px;
+    height: 40px;
+    position: relative;
+    top: 60px;
+    left: 326px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}
+
+#page8_loc4 {
+   //border: 1px black solid;
+  width: 210px;
+  // height: 40px;
+  position: absolute;
+  top: $tweet_top + ($tweet_top_offset * 4);
+  right: $right_pos_loc;
+
+  p.hashtag {
+    color: #fff;
+    font-size: 2em;
+    text-align: left;
+  }
+
+  h3.tweets {
+     //border: 1px black solid;
+    width: 105px;
+    height: 40px;
+    position: relative;
+    top: 62px;
+    left: 190px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 300;
+  }
+}

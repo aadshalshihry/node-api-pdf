@@ -1,0 +1,56 @@
+<div class="page">
+    <img class="bg" src="<%= `file:///${dir}/images/page7.png` %>">
+
+    <input type="hidden" id="page7Chart" value= "<%= page7Chart %>">
+    <div id="sentiment" style="width: 800px"></div>
+
+    <div class="pageNum"><%= pageNum %></div>
+</div>
+
+<script type="text/javascript">
+    var page7Chart = $('#page7Chart').val();
+    var dataArr = JSON.parse(page7Chart);
+
+    Highcharts.chart('sentiment', {
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 5
+            },
+            backgroundColor: "rgba(255, 255, 255, 0)",
+        },
+        credits: {
+            enabled: false
+        },
+        title: {
+            text: ''
+        },
+        plotOptions: {
+            pie: {
+                innerSize: 300,
+                depth: 45,
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.percentage:.1f}% - {point.name}',
+                    connectorWidth: 2,
+                    useHTML: true,
+                    style: {
+                        fontSize: '15px',
+                        fontFamily: 'Almarai',
+                        // textShadow: false, //bug fixed IE9 and EDGE
+                    },
+                }
+            }
+        },
+        colors: ['#2e9746', '#be202b', '#f2d02a', '#838281'],
+        series: [{
+            data: dataArr
+        }],
+        tooltip: {
+            enabled: false,
+        }
+    });
+</script>

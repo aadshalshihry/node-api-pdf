@@ -1,0 +1,60 @@
+.page3-row1 {
+  //border: 1px black solid;
+  position: absolute;
+  top: 240px;
+  width: $full-width;
+  height: 50px;
+}
+
+#page3-cell1 {
+  //border: 1px yellow solid;
+  position: relative;
+  right: 20px;
+  width: 180px;
+  text-align: left;
+  font-size: 3em;
+  padding-top: 5px;
+  padding-left: 25px;
+  color: #4a93cf;
+
+}
+
+#page3-cell2 {
+  //border: 1px yellow solid;
+  position: relative;
+  top: -29px;
+  right: 250px;
+  width: 170px;
+  text-align: left;
+  font-size: 3em;
+  padding-top: 5px;
+  padding-left: 20px;
+  color: #4a93cf;
+
+}
+
+#page3-cell3 {
+  //border: 1px yellow solid;
+  position: relative;
+  top: -60px;
+  right: 560px;
+  width: 100px;
+  text-align: left;
+  font-size: 3em;
+  padding-top: 5px;
+  padding-left: 20px;
+  color: #4a93cf;
+}
+
+#page3-cell4 {
+  //border: 1px yellow solid;
+  position: relative;
+  top: 137px;
+  right: 300px;
+  width: 100px;
+  text-align: left;
+  font-size: 3em;
+  padding-top: 5px;
+  padding-left: 20px;
+  color: #4a93cf;
+}

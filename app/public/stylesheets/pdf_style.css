@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Sackers Gothic Std';
+    font-weight: 500;
+    font-size: 7px;
+    /*background: lightblue url("/images/0.png") no-repeat fixed center;*/
+    -webkit-print-color-adjust: exact;
+    box-sizing: border-box;
+}
+
+.page {
+    position: relative;
+    /*height: 90mm;*/
+    /*width: 50mm;*/
+    display: block;
+    page-break-after: auto;
+    margin: 50px;
+    overflow: hidden;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+}

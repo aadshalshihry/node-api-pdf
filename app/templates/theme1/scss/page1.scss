@@ -1,0 +1,24 @@
+h1#title {
+  //border: 1px black solid;
+  position: absolute;
+  top: 100px;
+  width: $full-width;
+  z-index: 1;
+  font-size: 6em;
+  text-align: center;
+  color: rgb(18, 40, 68);;
+}
+
+p#desc {
+  //border: 1px black solid;
+  position: absolute;
+  top: 200px;
+  width: $full-width - 40;
+  height: 120px;
+  font-size: 3em;
+  text-align: center;
+  padding: 0 40px;
+  text-justify-trim: 30;
+  text-justify: distribute;
+  color: rgb(18, 40, 68);;
+}

@@ -1,0 +1,92 @@
+$radius: 25px;
+$bar_height: 20px;
+$bar_margin_bottom: 5px;
+
+#page4_box {
+  //border: 1px black solid;
+  width: 400px;
+  //height: 300px;
+  position: absolute;
+  top: 350px;
+  right: 420px;
+}
+
+.page4_hashtagList {
+  // border: 1px black solid;
+
+  .hashtag_name {
+    // border: 1px black solid;
+    font-size: 2em;
+    color: rgb(101, 178, 180);
+    float: right;
+    height: $bar_height;
+    margin-bottom: $bar_margin_bottom;
+    width: 190px;
+    text-align: left;
+    padding-top: 5px;
+  }
+
+  .colorBoxPage4 {
+    // border: 1px black solid;
+    background: #b4b4b4;
+    border-radius: $radius;
+    width: 200px;
+    height: $bar_height + 5;
+    float: left;
+    margin-bottom: $bar_margin_bottom;
+
+    #colorBg1, #colorBg2, #colorBg3, #colorBg4, #colorBg5 {
+      font-size: 2em;
+      color: white;
+      text-align: center;
+      border-radius: $radius;
+      height: $bar_height;
+      padding-top: 5px;
+    }
+
+    #colorBg1 {
+      background: #004E8C;
+      width: 150px;
+    }
+
+    #colorBg2 {
+      background: #556692;
+      width: 120px;
+    }
+
+    #colorBg3 {
+      width: 90px;
+      background: #083767;
+    }
+
+    #colorBg4 {
+      background: #4488BC;
+      width: 60px;
+    }
+
+    #colorBg5 {
+      background: #4488BC;
+      width: 50px;
+    }
+  }
+}
+
+#fontColor1 {
+  color: #004E8C;
+}
+
+#fontColor2 {
+  color: #556692;
+}
+
+#fontColor3 {
+  color: #083767;
+}
+
+#fontColor4 {
+  color: #4488BC;
+}
+
+#fontColor5 {
+  color: #4488BC;
+}

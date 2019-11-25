@@ -1,0 +1,57 @@
+<html dir="rtl">
+<head>
+    <meta charset="utf8">
+    <title>SuitArt Business Card</title>
+    <link href="https://fonts.googleapis.com/css?family=Almarai&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="<%= `${dir_file}/base.css` %>">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+
+</head>
+<body>
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/inter.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page2.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page3.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page4.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page5.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page6.ejs`) %>
+
+
+    <% if (data.sentiment.length > 0) { %>
+        <% pageNum += 1; %>
+        <%- include(`${dir}/partials/page7.ejs`) %>
+    <% }%>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page8.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page9.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page10.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page11.ejs`) %>
+
+    <% pageNum += 1; %>
+    <%- include(`${dir}/partials/page12.ejs`) %>
+
+    <%- include(`${dir}/partials/last-page.ejs`) %>
+
+
+</body>
+</html>

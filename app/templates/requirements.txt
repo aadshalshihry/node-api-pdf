@@ -1,0 +1,6 @@
+wordcloud
+num2words
+arabic-reshaper
+python-bidi
+numpy
+matplotlib
