@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: docker/prod/Dockerfile
     container_name: web-pdf-prod
+    restart: always
     volumes:
       - ./app:/usr/src/app
     ports:
