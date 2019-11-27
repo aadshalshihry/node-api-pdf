@@ -18,13 +18,14 @@ ENV LC_ALL en_US.UTF-8
 # Create app directory
 WORKDIR /usr/src/app
 
-COPY ./app/package*.json .
-
-RUN npm install && \
-        npm i http-errors && \
-        npm install -g pm2
+#COPY ./app/package*.json .
+#
+#RUN npm install && \
+#        npm i http-errors && \
+#        npm install -g pm2
 
 COPY ./app .
+RUN npm install
 
 WORKDIR /usr/src/app/templates
 RUN pip3 install -r requirements.txt
