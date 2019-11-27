@@ -4,7 +4,7 @@
 import sys
 import numpy as np
 from wordcloud import WordCloud
-import arabic_reshaper
+from arabic_reshaper import ArabicReshaper
 from bidi.algorithm import get_display
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -14,7 +14,14 @@ import io
 
 
 def ar_text(txt):
-    reshaped_text = arabic_reshaper.reshape(txt)    # correct its shape
+    configuration = {
+        'delete_harakat': False,
+        'support_ligatures': True,
+        'RIAL SIGN': True,  # Replace ر ي ا ل with ﷼
+        'use_unshaped_instead_of_isolated': True
+    }
+    reshaper = ArabicReshaper(configuration=configuration)
+    reshaped_text = reshaper.reshape(txt)    # correct its shape
     return get_display(reshaped_text)
 
 def ar_txt_array(arr):
@@ -44,18 +51,19 @@ def page13():
 
 
     # Image Mask to shape the wordcloud
-    img_mask = np.array(Image.open("/usr/src/app/public/images/img_mask.png"))
+    img_mask = np.array(Image.open("/home/roman/workplace/pdf-generator/app/public/images/img_mask.png"))
     transformed_img_mask = np.ndarray(
         (img_mask.shape[0], img_mask.shape[1]), np.int32)
     for i in range(len(img_mask)):
         transformed_img_mask[i] = list(map(transform_format, img_mask[i]))
 
     wc = WordCloud(
-        font_path="/usr/src/app/public/fonts/almari/Almarai-Regular.ttf",
-                    background_color="rgba(250, 252, 253, 1)", mode="RGBA",
+        font_path="/home/roman/workplace/pdf-generator/app/public/fonts/almari/Almarai-Regular.ttf",
+                    background_color="rgba(250, 252, 253, 0)", mode="RGBA",
                     max_words=9999, width=1000, height=1000,
                     mask=transformed_img_mask, contour_width=0,
-                    contour_color='firebrick')
+                    contour_color='firebrick'
+                    )
 
     d = {}
 

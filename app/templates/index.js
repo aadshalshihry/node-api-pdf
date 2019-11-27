@@ -8,9 +8,8 @@ var ejs = require('ejs');
 let { execSync: exec } = require('child_process');
 
 
-module.exports = function(app) {
+module.exports = async function(app) {
   app.post('/api/reports/pdf/fanoos', function(req, res, next) {
-    console.log("********************************", req.body.wordscloud)
     var dir = __dirname;
     var source = fs.readFileSync(__dirname + '/theme1/index.ejs', 'utf8');
     let ar_word_num;
@@ -61,7 +60,7 @@ module.exports = function(app) {
       page6ChartValue.push(req.body.tweet_during_day[i]['count'])
     }
 
-    var compiled = ejs.compile(source, {sourceMap: true});
+    var compiled = ejs.compile(source, {sourceMap: true,});
     var html = compiled({
       data: req.body,
       dir: `${__dirname}/theme1`,
@@ -75,22 +74,13 @@ module.exports = function(app) {
       page7Chart: JSON.stringify(req.body.sentiment)
     });
 
-    // pdf.create(html, options).toBuffer(function(err, buffer){/home/roman/workplace/pdf-generator/app/foo.pdf
-    //   res.json({
-    //     data: buffer
-    //   })
-    // });
-
     pdf.create(html, options).toStream(function(err, stream) {
       if (err) return console.log("ERROR", err);
+      console.log("Create")
+      stream.pipe(res)
+      console.log("done")
 
-      stream.pipe(res);
-      // res.setHeader('Content-disposition', 'inline; filename="Test.pdf"');
-      // res.setHeader('Content-type', 'application/pdf');
-      // stream.pipe(fs.createWriteStream('./foo.pdf'))
-      // var readStream = fs.createReadStream('./foo.pdf');
-      // readStream.pipe(res);
-      // res.send(stream.pipe(fs.createWriteStream('./foo.pdf')));
+
     });
 
     // pdf.create(html, options).toFile('./businesscard.pdf', function(err, r) {
@@ -100,6 +90,12 @@ module.exports = function(app) {
     //     msg: "Done..."
     //   })
     // });
+  });
+
+  app.options('/api/reports/pdf/fanoos/status/:filename', (req, res) => {
+    const filename = req.params.filename;
+    res.send(filename);
+
   });
 };
 
