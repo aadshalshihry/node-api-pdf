@@ -18,7 +18,7 @@ ENV LC_ALL en_US.UTF-8
 # Create app directory
 WORKDIR /usr/src/app
 
-COPY ./app/package*.json ./
+COPY ./app/package*.json .
 
 RUN npm install && \
         npm i http-errors && \
