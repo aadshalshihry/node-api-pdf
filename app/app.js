@@ -10,7 +10,7 @@ var cors = require('cors')
 
 
 
-// var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 // var pdfRouter = require('./routes/pdf');
 
@@ -61,7 +61,7 @@ app.use(function (req, res, next) {
 // app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/theme1',express.static(path.join(__dirname, 'templates/theme1')));
 
-// app.use('/', indexRouter);
+app.use('/', indexRouter);
 // app.use('/users', usersRouter);
 // app.use('/api/reports/pdf/fanoos', pdfRouter);
 require('./templates/index')(app, Handlebars);
