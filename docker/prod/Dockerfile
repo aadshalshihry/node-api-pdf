@@ -38,4 +38,4 @@ RUN cp -R ./public/fonts/Cairo /usr/local/share/fonts/sample/
 # Expose website on port
 EXPOSE 3000
 
-CMD ["pm2-docker", "process.json"]
+CMD ["pm2", "process.json"]
