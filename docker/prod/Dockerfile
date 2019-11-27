@@ -21,8 +21,7 @@ WORKDIR /usr/src/app
 COPY ./app/package*.json ./
 
 #USER node
-RUN npm install && \
-        npm install -g pm2
+RUN npm install
 
 COPY ./app .
 
