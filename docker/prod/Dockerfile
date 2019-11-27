@@ -1,4 +1,4 @@
-FROM node:10
+FROM node:alpine
 
 RUN apt update && apt install python3-pip -y
 
@@ -25,7 +25,7 @@ WORKDIR /usr/src/app
 #        npm install -g pm2
 
 COPY ./app .
-RUN npm install
+RUN npm install --production
 
 WORKDIR /usr/src/app/templates
 RUN pip3 install -r requirements.txt
