@@ -51,14 +51,14 @@ def page13():
 
 
     # Image Mask to shape the wordcloud
-    img_mask = np.array(Image.open("/home/roman/workplace/pdf-generator/app/public/images/img_mask.png"))
+    img_mask = np.array(Image.open("/usr/src/app/public/images/img_mask.png"))
     transformed_img_mask = np.ndarray(
         (img_mask.shape[0], img_mask.shape[1]), np.int32)
     for i in range(len(img_mask)):
         transformed_img_mask[i] = list(map(transform_format, img_mask[i]))
 
     wc = WordCloud(
-        font_path="/home/roman/workplace/pdf-generator/app/public/fonts/almari/Almarai-Regular.ttf",
+        font_path="/usr/src/app/public/fonts/almari/Almarai-Regular.ttf",
                     background_color="rgba(250, 252, 253, 0)", mode="RGBA",
                     max_words=9999, width=1000, height=1000,
                     mask=transformed_img_mask, contour_width=0,

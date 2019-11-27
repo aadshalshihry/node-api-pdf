@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "Mojaz",
+            "script": "./app.js",
+            "watch": true,
+            "autorestart": true,
+            "watch_options": {
+                "usePolling": true,
+                "interval": 500
+            }
+        }
+    ]
+}

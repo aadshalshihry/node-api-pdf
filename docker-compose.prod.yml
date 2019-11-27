@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/prod/Dockerfile
+    container_name: web-pdf-prod
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - "3000:3000"
+    networks:
+      - backend
+  nginx:
+    container_name: ${NGINX_CONTAINER_NAME}
+    image: ${NGINX_VERSION}
+    build:
+      context: docker/prod/nginx
+      dockerfile: nginx.dockerfile
+    networks:
+      - backend
+    ports:
+      - 80:80
+    depends_on:
+      - web
+
+networks:
+  backend:
+    driver: bridge
